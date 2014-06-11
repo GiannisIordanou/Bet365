@@ -125,10 +125,8 @@ with open('BET365_stats.csv', 'wb') as f:
         for stats_key_odds in stats_keys_odds:
             try:
                 stats_dict[stats_key_odds].append(simeio)
-                key_check = 'In'
             except:
                 stats_dict[stats_key_odds] = [simeio]
-                key_check = 'New'        
             stats_key_odds_values = stats_dict[stats_key_odds][:-1]
             match_stats.append(get_shmeio_stats(stats_key_odds_values, shmeia_list))
  
